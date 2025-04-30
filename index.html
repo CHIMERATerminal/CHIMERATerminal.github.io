@@ -42,11 +42,32 @@
 									
 									<h2><a href=>◎What is the Brink?◎</a></h2>
 									<p>
-										<form>
-										  <label for="password">Password:</label>
-										  <input type="password" id="password" name="password">
-										  <input type="submit" value="Submit">
-										</form>
+										<!DOCTYPE html>
+										<html lang="en">
+										<head>
+										  <meta charset="UTF-8" />
+										  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+										  <title>Password Redirect</title>
+										  <script>
+										    function checkPassword(event) {
+										      event.preventDefault(); // Prevent form from submitting normally
+										      const password = document.getElementById("password").value;
+										      if (password === "JellyBelly") {
+										        window.location.href = "https://www.example.com"; // Replace with your target URL
+										      } else {
+										        alert("Incorrect password. Please try again.");
+										      }
+										    }
+										  </script>
+										</head>
+										<body>
+										  <form onsubmit="checkPassword(event)">
+										    <label for="password">Enter Password:</label>
+										    <input type="password" id="password" name="password" required />
+										    <button type="submit">Submit</button>
+										  </form>
+										</body>
+										</html>
 									</p>
 									</header>
 									<a href="https://pbs.twimg.com/media/FoFO4YVWAAQi7aP?format=jpg&name=4096x4096" class="image fit"><img src="https://pbs.twimg.com/media/FoFO4YVWAAQi7aP?format=jpg&name=4096x4096" alt="" /></a>
